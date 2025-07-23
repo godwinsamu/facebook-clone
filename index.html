@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Facebook</title>
-  </head>
-  <body>
-    <link rel="stylesheet" href="style.css" />
-    <div class="container">
-      <div class="header">
-        <h1>facebook</h1>
-      </div>
-      <div class="form">
-        <form id="form">
-          <div class="heading"><h2>Log in to Facebook</h2></div>
-          <div class="input">
-            <input
-              type="text"
-              placeholder="Email address or phone number"
-              id="email"
-            />
-          </div>
-          <div class="input">
-            <input type="password" placeholder="Password" id="pass" />
-          </div>
-
-          <button class="btn1" onclick="login()">Log in</button>
-          <a href="#">Forgot password?</a>
-          <h5>or</h5>
-          <button class="btn2">Create new account</button>
-        </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook Login Clone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      Connect with friends and the world around you on Facebook.
+    </div>
+    <div class="right-section">
+      <div class="login-box">
+        <input type="text" id="email" placeholder="Email or Phone" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="showNotification('Login Successful')">Log In</button>
+        <button onclick="showNotification('Redirecting to Create Account...')">Create New Account</button>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+
+  <div class="notification animate__animated" id="notification">
+    <i class="fas fa-check"></i>
+    <span id="notif-message"></span>
+  </div>
+<script src="script.js"></script>
+</body>
 </html>
