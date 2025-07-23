@@ -1,117 +1,104 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(0, 0, 0, 0.1);
-  height: 100vh;
-}
-.darkmode{
-    border-radius: 50%;
-    background:white;
-    margin-left:12rem;
-    margin-top:-1rem;
-    cursor:pointer;
-}
-.header {
-  font-size: 20px;
-  margin-left: 6.5rem;
-  letter-spacing: 0.1px;
-  color: blue;
-}
-form {
-  border-radius: 10px;
-  background: #fff;
-  padding: 2rem;
-  margin-top: 1rem;
-  width: 100%;
-  box-shadow: 0px 1px 0px rgb(0, 0, 0, 0.2);
-}
-.heading {
-  margin-left: 4.3rem;
-  font-family: sans-serif;
-  font-size: 13px;
-}
-input {
-  border: 2px solid rgb(0, 0, 0, 0.1);
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 1rem;
-  padding-left: 1rem;
-  padding-right: 8rem;
-  border-radius: 5px;
-}
-.btn1 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 5px;
-  width: 100%;
-  background: blue;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
-  font-size: 15px;
-  margin-top: 1rem;
-}
-a {
-  color: blue;
-  display: block;
-  text-align: center;
-  margin-top: 1rem;
-  text-decoration: none;
-}
-input:focus {
-  outline: none;
-  border: rgb(0, 0, 0, 0.1) 2px solid;
-}
-::placeholder {
-  overflow: visible;
-}
-h5 {
-  color: gray;
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-}
-.btn2 {
-  cursor: pointer;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  background: rgb(48, 212, 48);
-  padding-top: 5%;
-  padding-bottom: 5%;
-  font-size: 17px;
-  width: 75%;
-  color: #fff;
-  font-weight: bold;
-  margin-left: 13%;
-  margin-top: 1rem;
-}
-@media(max-width:600px){
-    form{
-        width:85%;
-        margin-left:2rem;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
     }
-    input{
-        padding-left:0;
-        width:36vh;
-        text-overflow: ellipsis;
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: linear-gradient(to right, #dfe9f3, #ffffff);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
-    .btn1{
-        width:100%;
+    .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 1000px;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
     }
-    .heading{
-margin-left:4rem;
+    .left-section {
+      flex: 1;
+      background: #1877f2;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
     }
-    a{
-        font-size:15px;
+    .right-section {
+      flex: 1;
+      padding: 40px;
+    }
+    .login-box {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .login-box input {
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+    }
+    .login-box button {
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+      color: #fff;
+    }
+    .login-box button:first-of-type {
+      background-color: #1877f2;
+    }
+    .login-box button:first-of-type:hover {
+      background-color: #155db2;
+    }
+    .login-box button:last-of-type {
+      background-color: #28a745;
+    }
+    .login-box button:last-of-type:hover {
+      background-color: #218838;
+    }
+    .notification {
+      position: fixed;
+      top: -100px;
+      left: 0;
+      width: 100%;
+      background: #28a745;
+      color: white;
+      padding: 20px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      z-index: 9999;
     }
 
-}
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .left-section {
+        padding: 20px;
+        font-size: 20px;
+      }
+      .right-section {
+        padding: 20px;
+      }
+    }
